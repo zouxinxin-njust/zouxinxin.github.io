@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邹信信 Xinxin Zou - 个人主页</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #6c757d;
+        }
+        .profile-info {
+            max-width: 500px;
+        }
+        h1 {
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        .name-en {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 20px;
+        }
+        section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            color: #2c3e50;
+        }
+        .education-item, .publication-item {
+            margin-bottom: 20px;
+        }
+        .education-item:last-child, .publication-item:last-child {
+            margin-bottom: 0;
+        }
+        .year {
+            font-weight: bold;
+            color: #6c757d;
+        }
+        .publication-title {
+            font-weight: bold;
+        }
+        .authors {
+            font-style: italic;
+            color: #6c757d;
+        }
+        .journal {
+            color: #2c3e50;
+        }
+        .research-interests ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .research-interest-item {
+            margin-bottom: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 15px;
+            background-color: #4a6bdf;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .lang-switch:hover {
+            background-color: #3351b9;
+        }
+        [lang="en"] {
+            display: none;
+        }
+        body.english [lang="zh"] {
+            display: none;
+        }
+        body.english [lang="en"] {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="lang-switch" id="langToggle" onclick="toggleLanguage()">English</button>
+        <div class="profile-container">
+            <div class="profile-image">照片</div>
+            <div class="profile-info">
+                <h1 lang="zh">邹信信</h1>
+                <h1 lang="en">Xinxin Zou</h1>
+                <div class="name-en" lang="zh">Xinxin Zou</div>
+                <div class="name-en" lang="en">邹信信</div>
+                <p lang="zh">南京理工大学 | 博士研究生</p>
+                <p lang="en">Nanjing University of Science and Technology | Ph.D. Student</p>
+                <div class="contact-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6c757d" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg>
+                    <a href="mailto:zouxinxin@njust.edu.cn">zouxinxin@njust.edu.cn</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="education">
+        <h2 lang="zh">教育经历</h2>
+        <h2 lang="en">Education</h2>
+        <div class="education-item">
+            <div class="year">2022 - <span lang="zh">至今</span><span lang="en">Present</span></div>
+            <div lang="zh">博士研究生，南京理工大学</div>
+            <div lang="en">Ph.D. Student, Nanjing University of Science and Technology</div>
+            <div lang="zh">专业：计算机科学与技术</div>
+            <div lang="en">Major: Computer Science and Technology</div>
+            <div lang="zh">导师：杨健 教授</div>
+            <div lang="en">Advisor: Prof. XXX</div>
+        </div>
+        <div class="education-item">
+            <div class="year">2018 - 2022</div>
+            <div lang="zh">学士学位，南京理工大学</div>
+            <div lang="en">B.Eng., Nanjing University of Science and Technology</div>
+            <div lang="zh">专业：计算机科学与技术</div>
+            <div lang="en">Major: Computer Science and Technology</div>
+        </div>
+    </section>
+
+    <!-- <section class="research">
+        <h2 lang="zh">研究方向</h2>
+        <h2 lang="en">Research Interests</h2>
+        <div class="research-interests">
+            <div class="research-interest-item">
+                <h3 lang="zh">计算机视觉与深度学习</h3>
+                <h3 lang="en">Computer Vision and Deep Learning</h3>
+                <p lang="zh">专注于开发高效的视觉识别算法，特别是在资源受限的环境中。研究轻量级神经网络架构和模型压缩技术，用于目标检测、图像分割和场景理解。</p>
+                <p lang="en">Focused on developing efficient visual recognition algorithms, especially in resource-constrained environments. Research on lightweight neural network architectures and model compression techniques for object detection, image segmentation, and scene understanding.</p>
+            </div>
+            
+            <div class="research-interest-item">
+                <h3 lang="zh">多模态学习</h3>
+                <h3 lang="en">Multimodal Learning</h3>
+                <p lang="zh">研究视觉和语言数据的联合表示学习。探索跨模态对比学习方法，以增强模型对多源数据的理解能力。致力于构建能够同时处理图像、文本和其他模态数据的智能系统。</p>
+                <p lang="en">Investigating joint representation learning of visual and linguistic data. Exploring cross-modal contrastive learning approaches to enhance model understanding of multi-source data. Committed to building intelligent systems capable of simultaneously processing images, text, and other modal data.</p>
+            </div>
+            
+            <div class="research-interest-item">
+                <h3 lang="zh">自监督学习</h3>
+                <h3 lang="en">Self-supervised Learning</h3>
+                <p lang="zh">研究无需大量标注数据的表示学习方法。设计新颖的预训练任务和损失函数，以从未标注数据中提取有意义的特征。关注自监督学习在少样本学习和域适应中的应用。</p>
+                <p lang="en">Studying representation learning methods that do not require large amounts of labeled data. Designing novel pretraining tasks and loss functions to extract meaningful features from unlabeled data. Focus on applications of self-supervised learning in few-shot learning and domain adaptation.</p>
+            </div>
+            
+            <div class="research-interest-item">
+                <h3 lang="zh">人工智能安全与可解释性</h3>
+                <h3 lang="en">AI Security and Explainability</h3>
+                <p lang="zh">研究深度学习模型的鲁棒性和可解释性。开发对抗样本防御技术，并设计能够提供决策依据的可解释AI系统。致力于构建更加透明、可靠的AI应用。</p>
+                <p lang="en">Researching the robustness and explainability of deep learning models. Developing adversarial example defense techniques and designing explainable AI systems that can provide decision rationales. Committed to building more transparent and reliable AI applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="publications">
+        <h2 lang="zh">发表论文</h2>
+        <h2 lang="en">Publications</h2>
+        <div class="publication-item">
+            <div class="publication-title" lang="zh">高效视觉特征提取的新方法</div>
+            <div class="publication-title" lang="en">An Effective Approach for Feature Extraction in Computer Vision</div>
+            <div class="authors">Zou, X., Wang, L., & Zhang, J.</div>
+            <div class="journal">IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023</div>
+        </div>
+        <div class="publication-item">
+            <div class="publication-title" lang="zh">自然语言处理中的深度学习：综述</div>
+            <div class="publication-title" lang="en">Deep Learning for Natural Language Processing: A Survey</div>
+            <div class="authors">Li, R., Zou, X., & Chen, Y.</div>
+            <div class="journal">ACM Computing Surveys, 2022</div>
+        </div>
+        <div class="publication-item">
+            <div class="publication-title" lang="zh">复杂环境下实时目标检测的新算法</div>
+            <div class="publication-title" lang="en">Novel Algorithm for Real-time Object Detection in Complex Environments</div>
+            <div class="authors">Zou, X., & Liu, H.</div>
+            <div class="journal">Journal of Computer Science and Technology, 2021</div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2 lang="zh">研究项目</h2>
+        <h2 lang="en">Research Projects</h2>
+        <div class="education-item">
+            <div class="year">2023 - <span lang="zh">至今</span><span lang="en">Present</span></div>
+            <div lang="zh">基于深度学习的智能视觉系统研究</div>
+            <div lang="en">Research on Intelligent Vision Systems Based on Deep Learning</div>
+            <div lang="zh">国家自然科学基金项目</div>
+            <div lang="en">National Natural Science Foundation of China</div>
+        </div>
+        <div class="education-item">
+            <div class="year">2021 - 2023</div>
+            <div lang="zh">多模态数据融合技术研究与应用</div>
+            <div lang="en">Research and Application of Multimodal Data Fusion Technology</div>
+            <div lang="zh">江苏省重点研发计划</div>
+            <div lang="en">Jiangsu Province Key Research and Development Program</div>
+        </div>
+    </section>
+
+    <section class="awards">
+        <h2 lang="zh">获奖情况</h2>
+        <h2 lang="en">Awards & Honors</h2>
+        <div class="education-item">
+            <div class="year">2023</div>
+            <div lang="zh">南京理工大学优秀博士生</div>
+            <div lang="en">Outstanding Doctoral Student, NJUST</div>
+        </div>
+        <div class="education-item">
+            <div class="year">2022</div>
+            <div lang="zh">国家奖学金</div>
+            <div lang="en">National Scholarship</div>
+        </div>
+        <div class="education-item">
+            <div class="year">2021</div>
+            <div lang="zh">优秀学士论文奖</div>
+            <div lang="en">Outstanding Bachelor's Thesis Award</div>
+        </div>
+    </section> -->
+
+    <footer>
+        <span lang="zh">© 2025 邹信信 | 最后更新日期：2025年4月</span>
+        <span lang="en">© 2025 Xinxin Zou | Last Updated: April 2025</span>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            const button = document.getElementById('langToggle');
+            
+            if (body.classList.contains('english')) {
+                body.classList.remove('english');
+                button.textContent = 'English';
+            } else {
+                body.classList.add('english');
+                button.textContent = '中文';
+            }
+        }
+    </script>
+</body>
+</html>
